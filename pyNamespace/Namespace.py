@@ -12,7 +12,7 @@ class Namespace:
                 self.value.from_dict(d)
             if isinstance(d, list) is True:
                 self.value.from_list(d)
-            if insinstance(d, graph.Graph) is True:
+            if isinstance(d, graph.Graph) is True:
                 self.value.from_dict(d.to_dict())
         if "/" not in self.value:
             self.value.add_node("/", Dir(self, "", fullpath=""))
