@@ -1,3 +1,5 @@
+![Python package](https://github.com/vulogov/pyNamespace/workflows/Python%20package/badge.svg?branch=master)
+
 # pyNamespace
 
 pyNamespace is an Application Framework supporting creation of the in-application data storage, simulating organization and behavior of the
