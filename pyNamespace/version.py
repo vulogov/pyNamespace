@@ -1,6 +1,6 @@
 
 VERSION='0.0'
-RELEASE='0.0.3'
+RELEASE='0.0.4'
 URL='https://github.com/vulogov/pyNamespace'
 AUTHOR='Vladimir Ulogov'
 AUTHOR_EMAIL='vladimir.ulogov@me.com'
@@ -680,7 +680,9 @@ the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
 """
-READ_me = """# pyNamespace
+READ_me = """![Python package](https://github.com/vulogov/pyNamespace/workflows/Python%20package/badge.svg?branch=master)
+
+# pyNamespace
 
 pyNamespace is an Application Framework supporting creation of the in-application data storage, simulating organization and behavior of the
 Unix filesystem graph. You can create "directories" and data objects. Refer  those directories and data using Unix-like path. Also, you can create internal links between an objects and link one data object to more than one "directory".
