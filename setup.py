@@ -1,5 +1,3 @@
-from gevent import monkey  # isort:skip # noqa
-monkey.patch_all()
 import os
 from setuptools import setup, find_packages
 try:
@@ -56,7 +54,7 @@ write_version("pyNamespace/version.py")
 setup(name=name,
     setup_requires=['pytest-runner'],
     version=release,
-    description='Filesystem-like hierarhy of objects and it's namespace',
+    description="Filesystem-like hierarhy of objects and it's namespace",
     long_description=long_description,
     long_description_content_type="text/markdown",
     classifiers=[
