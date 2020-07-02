@@ -36,7 +36,7 @@ class Namespace:
         root = self.value.node("/")
         p = path.split("/")
         return self._mkdir(root, p, [])
-    def set(self, path, value):
+    def set(self, path, value, **kw):
         path = os.path.normpath(path)
         dir = os.path.dirname(path)
         name = os.path.basename(path)
@@ -46,7 +46,8 @@ class Namespace:
             if _n.name == name:
                 _n.value = value
                 return _n
-        o = Object(self, name, value, fullpath=path)
+        kw["fullpath"] = path
+        o = Object(self, name, value, **kw)
         self.value.add_node(o.id, o)
         self.value.add_edge(ld.id, o.id)
         return o
@@ -111,6 +112,16 @@ class Namespace:
         dir = self.mkdir(path)
         res = {}
         for _from, _to, _weight in self.value.edges(from_node=dir.id):
+            o = self.value.node(_to)
+            if o is None:
+                continue
+            res[o.name] = o
+        return res
+    Out = ls
+    def In(self, path):
+        dir = self.mkdir(path)
+        res = {}
+        for _from, _to, _weight in self.value.edges(to_node=dir.id):
             o = self.value.node(_to)
             if o is None:
                 continue

@@ -33,7 +33,7 @@ def nsRelease(ns):
 
 name="pyNamespace"
 version="0.0"
-release="0.0.4"
+release="0.0.5"
 author='Vladimir Ulogov'
 author_email='vladimir.ulogov@me.com'
 url='https://github.com/vulogov/pyNamespace'
