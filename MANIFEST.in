@@ -1,0 +1,5 @@
+recursive-include pyNamespace *.py
+recursive-include pyNamespace *.pickle
+include README.md
+include LICENSE
+include requirements.txt

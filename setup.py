@@ -12,8 +12,6 @@ root_dir = os.path.abspath(os.path.join(os.path.dirname(__file__)))
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
-with open("LICENSE", "r") as fh:
-    license_txt = fh.read()
 
 VERSION_PY="""
 VERSION='%s'
@@ -22,8 +20,6 @@ URL='%s'
 AUTHOR='%s'
 AUTHOR_EMAIL='%s'
 LICENSE='%s'
-LICENSE_txt = \"\"\"%s\"\"\"
-READ_me = \"\"\"%s\"\"\"
 
 def nsVersion(ns):
     return VERSION
@@ -33,7 +29,7 @@ def nsRelease(ns):
 
 name="pyNamespace"
 version="0.0"
-release="0.0.5"
+release="0.0.7"
 author='Vladimir Ulogov'
 author_email='vladimir.ulogov@me.com'
 url='https://github.com/vulogov/pyNamespace'
@@ -45,7 +41,7 @@ def load_requirements(fname):
 
 def write_version(fname):
     f = open("{}/{}".format(root_dir, fname), 'w')
-    f.write(VERSION_PY % (version, release, url, author, author_email, license, license_txt, long_description))
+    f.write(VERSION_PY % (version, release, url, author, author_email, license))
 
 write_version("pyNamespace/version.py")
 
